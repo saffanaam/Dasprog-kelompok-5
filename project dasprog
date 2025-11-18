@@ -1,1 +1,6 @@
 #include <stdio.h>
+
+//kalku hukum ohm
+void kalkulatorOhm {
+  int pilihan
+  double V,I,R;
