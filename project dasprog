@@ -110,4 +110,117 @@ voidResistorP() {
  printf("Total Hambatan Paralel = %.3lf Ohm\n", total);
 }
 
+//Konversi bilangan 
+//Desimal -> Biner / Oktal / Hex
 
+void desimalKonversi() {
+  long long desimal;
+  printf("\nKonversi dari Desimal\n");
+  printf("Masukkan bilangan desimal: ");
+  scanf("%lld", &desimal);
+  long long d;
+
+//Biner
+  char bin[100];
+  int idx = 0;
+  d = desimal;
+
+  if (d == 0) strcpy(bin, "0");
+  else {
+    while (d > 0) {
+    bin[idx++] = (d % 2) + '0';
+    d /= 2;
+  }
+  bin[idx] = '\0';
+  balikString(bin);
+}
+
+//Oktal
+char okt[100];
+idx = 0;
+d = desimal;
+
+ if (d == 0) strcpy(okt, "0");
+    else {
+      while (d > 0) {
+        okt[idx++] = (d % 8) + '0';
+          d /= 8;
+        }
+        okt[idx] = '\0';
+        balikString(okt);
+    }
+
+//Hex
+char hex[100];
+idx = 0;
+d = desimal;
+
+  if (d == 0) strcpy(hex, "0");
+    else {
+        while (d > 0) {
+            int r = d % 16;
+            hex[idx++] = (r < 10) ? (r + '0') : (r - 10 + 'A');
+            d /= 16;
+        }
+        hex[idx] = '\0';
+        balikString(hex);
+    }
+
+    printf("\nHasil Konversi:\n");
+    printf("- Biner        : %s\n", bin);
+    printf("- Oktal        : %s\n", okt);
+    printf("- Heksadesimal : %s\n", hex);
+}
+
+//Biner -> Desimal
+void binerKeDesimal() {
+    char bin[100];
+    printf("\nKonversi Biner ke Desimal\n");
+    printf("Masukkan bilangan biner: ");
+    scanf("%s", bin);
+
+    long long desimal = 0;
+    for (int i = 0; bin[i] != '\0'; i++) {
+        desimal = desimal * 2 + (bin[i] - '0');
+    }
+
+    printf("Hasil: %lld\n", desimal);
+}
+
+//Oktal -> Desimal
+void oktalKeDesimal() {
+    char okt[100];
+    printf("\nKonversi Oktal ke Desimal\n");
+    printf("Masukkan bilangan oktal: ");
+    scanf("%s", okt);
+
+    long long desimal = 0;
+    for (int i = 0; okt[i] != '\0'; i++) {
+        desimal = desimal * 8 + (okt[i] - '0');
+    }
+
+    printf("Hasil: %lld\n", desimal);
+}
+
+//Hex -> Desimal
+void hexKeDesimal() {
+    char hex[100];
+    printf("\nKonversi Hex ke Desimal\n");
+    printf("Masukkan bilangan heksadesimal: ");
+    scanf("%s", hex);
+
+    long long desimal = 0;
+
+    for (int i = 0; hex[i] != '\0'; i++) {
+        char c = hex[i];
+        int val;
+
+        if (c >= '0' && c <= '9') val = c - '0';
+        else if (c >= 'A' && c <= 'F') val = c - 'A' + 10;
+        else if (c >= 'a' && c <= 'f') val = c - 'a' + 10;
+
+        desimal = desimal * 16 + val;
+    }
+
+    printf("Hasil: %lld\n", desimal);
+}
