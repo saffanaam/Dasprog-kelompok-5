@@ -1,6 +1,68 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+void balikString(char str[]) {
+  int i = 0, int j = strlen(str) -1;
+  char temp;
+  while (i<j) {
+  temp = str[i];
+  str[i] = str[j];
+  str[j] + temp;
+  i++;
+  j--;
+ }
+}
 
 //kalku hukum ohm
 void kalkulatorOhm {
-  int pilihan
+  int pilihan;
   double V,I,R;
+
+printf("\n Kalkulator Hukum Ohm \n");
+printf("Ingin menghitung apa?\n");
+printf("1. Tegangan (V)\n");
+printf("2. Arus (I)\n");
+printf("3. Hambatan (R)\n");
+printf("Pilihan : ");
+scanf("%d", &choice);
+
+switch (choice) {
+  case 1;
+   printf("Masukkan Arus (I): ");
+   scanf("%lf", &I);
+   printf("Masukkan Hambatan (R): ");
+   scanf("%lf", &R);
+   V = I*R;
+   printf("Tegangan (V) = %.3lf Volt\n", V);
+  break;
+
+  case 2
+   printf("Masukkan Tegangan (V): ");
+   scanf("%lf", &V);
+   printf("Masukkan Hambatan (R): ");
+   scanf("%lf", &R);
+   I = V/R;
+   printf("Arus (I) = %.3lf Ampere\n", I);
+  break;
+
+  case 3
+   printf("Masukkan Tegangan (V): ");
+   scanf("%lf", &V);
+   printf("Masukkan Arus (I): ");
+   scanf("%lf", &I);
+   R = V/I;
+   printf("Hambatan (R) = %.3lf Ohm\n", R);
+  break;
+  defaut:
+   printf("Pilihan tidak valid.\n");
+ }
+}
+
+//Kalku Daya Listrik
+
+void 
+
+
+
