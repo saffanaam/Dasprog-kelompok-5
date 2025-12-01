@@ -224,3 +224,55 @@ void hexKeDesimal() {
 
     printf("Hasil: %lld\n", desimal);
 }
+
+int main (){
+    int choice;
+      do {
+      system("cls || clear");
+
+printf("==========================================\n");
+      printf("1. Kalkulator Hukum Ohm\n");
+      printf("2. Kalkulator Daya Listrik\n");
+      printf("3. Kalkulator Resistor Seri\n");
+      printf("4. Kalkulator Resistor Paralel\n");
+      printf("5. Desimal -> Biner\n");
+      printf("6. Biner -> Desimal\n");
+      printf("7. Oktal -> Desimal\n");
+      printf("8. Hex -> Desimal\n");
+      printf("9. Keluar\n");
+
+printf("------------------------------------------\n");
+      printf("Masukkan pilihan yang diinginkan: ");
+      scanf("%d", &choice);
+
+getchar();
+switch(choice){
+      case 1: KalkulatorOhm();
+      break;
+      case 2: power();
+      break;
+      case 3: ResistorS();
+      break;
+      case 4: ResistorP();
+      break;
+      case 5: DesimalKonversi();
+      break;
+      case 6: binerKeDesimal();
+      break;
+      case 7: oktalKeDesimal();
+      break;
+      case 8: hexKeDesimal();
+      break;
+      case 9:
+            printf("Terima kasih telah menggunakan toolkit!\n");
+      break;
+    default:
+      printf("Pilihan tidak valid!\n");
+  }
+printf("\nTekan enter untuk kembali ke menu");
+      getchar();
+
+  } while (choice !=9);
+
+  return 0;
+}
