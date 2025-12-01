@@ -62,7 +62,52 @@ switch (choice) {
 
 //Kalku Daya Listrik
 
-void 
+void power() {
+  double V,I,P;
+  printf("\nKalkulator Daya Listrik\n");
+  printf("Masukkan Tegangan (V) : ");
+  scanf("%lf", &V);
+  printf("Masukkan Arus (I) : ");
+  scanf("%lf", &I);
 
+  P = V*I;
+  printf("Daya = %.3lf Watt\n", P);
+}
+
+//Resistor Seri
+
+voidResistorS() {
+ int n;
+ double R, total = 0;
+ printf("\nKalkulator Resistor Seri\n");
+ printf("Masukkan jumlah resistor : ");
+ scanf("&d", &n);
+
+ for(int i = 1; i<=n; i++) {
+  printf("Masukkan nilai Resistor %d : ",i);
+  scanf("%lf", &R);
+  total += R;
+ }
+ printf("Total Hambatan Seri = %.3lf Ohm\n", total);
+}
+
+//Resistor Paralel
+
+voidResistorP() {
+ int n;
+ double R, sum = 0;
+ printf("\nKalkulator Resistor Paralel\n");
+ printf("Masukkan jumlah resistor : ");
+ scanf("&d", &n);
+
+ for(int i = 1; i<=n; i++) {
+  printf("Masukkan nilai Resistor %d : ",i);
+  scanf("%lf", &R);
+  sum += 1.0/R;
+ }
+
+ double total = 1.0/sum;
+ printf("Total Hambatan Paralel = %.3lf Ohm\n", total);
+}
 
 
