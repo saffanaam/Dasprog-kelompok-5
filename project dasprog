@@ -10,7 +10,7 @@ void balikString(char str[]) {
   while (i<j) {
   temp = str[i];
   str[i] = str[j];
-  str[j] + temp;
+  str[j] = temp;
   i++;
   j--;
  }
@@ -55,7 +55,7 @@ switch (pilihan) {
    R = V/I;
    printf("Hambatan (R) = %.3lf Ohm\n", R);
   break;
-  defaut:
+  default:
    printf("Pilihan tidak valid.\n");
  }
 }
@@ -98,7 +98,7 @@ void ResistorP() {
  double R, sum = 0;
  printf("\nKalkulator Resistor Paralel\n");
  printf("Masukkan jumlah resistor : ");
- scanf("&d", &n);
+ scanf("%d", &n);
 
  for(int i = 1; i<=n; i++) {
   printf("Masukkan nilai Resistor %d : ",i);
