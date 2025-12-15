@@ -5,7 +5,7 @@
 
 void balikString(char str[]) {
   int i = 0;
-  int j = strlen(str) -1;
+  int j = strlen(str) - 1;
   char temp;
   while (i<j) {
   temp = str[i];
@@ -20,7 +20,7 @@ void kalkulatorOhm() {
   int pilihan;
   double V,I,R;
 
-printf("\n Kalkulator Hukum Ohm \n");
+printf("\n--- Kalkulator Hukum Ohm ---\n");
 printf("Ingin menghitung apa?\n");
 printf("1. Tegangan (V)\n");
 printf("2. Arus (I)\n");
@@ -64,7 +64,7 @@ switch (pilihan) {
 
 void power() {
   double V,I,P;
-  printf("\nKalkulator Daya Listrik\n");
+  printf("\n--- Kalkulator Daya Listrik ---\n");
   printf("Masukkan Tegangan (V) : ");
   scanf("%lf", &V);
   printf("Masukkan Arus (I) : ");
@@ -79,9 +79,9 @@ void power() {
 void ResistorS() {
  int n;
  double R, total = 0;
- printf("\nKalkulator Resistor Seri\n");
+ printf("\n--- Kalkulator Resistor Seri ---\n");
  printf("Masukkan jumlah resistor : ");
- scanf("&d", &n);
+ scanf("%d", &n);
 
  for(int i = 1; i<=n; i++) {
   printf("Masukkan nilai Resistor %d : ",i);
@@ -96,7 +96,7 @@ void ResistorS() {
 void ResistorP() {
  int n;
  double R, sum = 0;
- printf("\nKalkulator Resistor Paralel\n");
+ printf("\n--- Kalkulator Resistor Paralel ---\n");
  printf("Masukkan jumlah resistor : ");
  scanf("%d", &n);
 
@@ -228,8 +228,10 @@ void hexKeDesimal() {
 int main (){
     int choice;
       do {
-      system("cls || clear");
+      system("clear");
 
+printf("==========================================\n");
+printf("   TOOLKIT LENGKAP ASISTEN LAB ELEKTRO\n");
 printf("==========================================\n");
       printf("1. Kalkulator Hukum Ohm\n");
       printf("2. Kalkulator Daya Listrik\n");
