@@ -4,7 +4,8 @@
 #include <math.h>
 
 void balikString(char str[]) {
-  int i = 0, int j = strlen(str) -1;
+  int i = 0;
+  int j = strlen(str) -1;
   char temp;
   while (i<j) {
   temp = str[i];
@@ -14,9 +15,8 @@ void balikString(char str[]) {
   j--;
  }
 }
-
 //kalku hukum ohm
-void kalkulatorOhm {
+void kalkulatorOhm() {
   int pilihan;
   double V,I,R;
 
@@ -26,10 +26,10 @@ printf("1. Tegangan (V)\n");
 printf("2. Arus (I)\n");
 printf("3. Hambatan (R)\n");
 printf("Pilihan : ");
-scanf("%d", &choice);
+scanf("%d", &pilihan);
 
-switch (choice) {
-  case 1;
+switch (pilihan) {
+  case 1:
    printf("Masukkan Arus (I): ");
    scanf("%lf", &I);
    printf("Masukkan Hambatan (R): ");
@@ -38,7 +38,7 @@ switch (choice) {
    printf("Tegangan (V) = %.3lf Volt\n", V);
   break;
 
-  case 2
+  case 2:
    printf("Masukkan Tegangan (V): ");
    scanf("%lf", &V);
    printf("Masukkan Hambatan (R): ");
@@ -47,7 +47,7 @@ switch (choice) {
    printf("Arus (I) = %.3lf Ampere\n", I);
   break;
 
-  case 3
+  case 3:
    printf("Masukkan Tegangan (V): ");
    scanf("%lf", &V);
    printf("Masukkan Arus (I): ");
@@ -247,7 +247,7 @@ printf("------------------------------------------\n");
 
 getchar();
 switch(choice){
-      case 1: KalkulatorOhm();
+      case 1: kalkulatorOhm();
       break;
       case 2: power();
       break;
@@ -255,7 +255,7 @@ switch(choice){
       break;
       case 4: ResistorP();
       break;
-      case 5: DesimalKonversi();
+      case 5: desimalKonversi();
       break;
       case 6: binerKeDesimal();
       break;
