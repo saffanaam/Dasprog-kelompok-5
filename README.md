@@ -27,6 +27,5 @@ PENJELASAN
 Fungsi main() berfungsi sebagai menu utama yang mengatur jalannya seluruh program. Program ini dijalankan menggunakan perulangan do-while yang menyebabkan menu akan terus ditampilkan selama pengguna belum memilih opsi Keluar (9). Perintah system("clear") digunakan untuk membersihkan layar terminal agar tampilan menu tetap rapi. Dilanjut dengan menampilkan daftar menu yang berisi berbagai fitur perhitungan kelistrikan dan konversi bilangan. Pengguna diminta memasukkan pilihan menu dalam bentuk angka. Setelah input diterima, perintah getchar() digunakan untuk membuang karakter Enter yang tersisa di buffer agar tidak mengganggu proses input berikutnya.
 Pemilihan fitur dilakukan menggunakan struktur switch-case, di mana setiap pilihan akan memanggil fungsi yang sesuai, seperti kalkulator hukum Ohm, daya listrik, perhitungan resistor, dan konversi bilangan. Setelah satu fitur dijalankan, program akan menunggu pengguna menekan Enter sebelum kembali ke menu utama. Hal ini bertujuan agar hasil perhitungan dapat dilihat terlebih dahulu. Program akan berhenti sepenuhnya ketika pengguna memilih menu 9 (Keluar) dan menampilkan pesan penutup.
 
-#F
 <img width="1440" height="900" alt="Image" src="https://github.com/user-attachments/assets/9bc5c808-858f-4c20-ae20-a78a335f2026" />
 
