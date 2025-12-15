@@ -76,7 +76,7 @@ void power() {
 
 //Resistor Seri
 
-voidResistorS() {
+void ResistorS() {
  int n;
  double R, total = 0;
  printf("\nKalkulator Resistor Seri\n");
@@ -93,7 +93,7 @@ voidResistorS() {
 
 //Resistor Paralel
 
-voidResistorP() {
+void ResistorP() {
  int n;
  double R, sum = 0;
  printf("\nKalkulator Resistor Paralel\n");
